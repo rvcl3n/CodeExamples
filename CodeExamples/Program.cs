@@ -56,6 +56,20 @@ namespace CodeExamples
             Proxy proxy = new Proxy(realSubject);
             clientForProxy.ClientCode(proxy);
 
+            //Bridge call
+            ClientForBridge clientForBridge = new ClientForBridge();
+
+            Abstraction abstraction;
+            // The client code should be able to work with any pre-configured
+            // abstraction-implementation combination.
+            abstraction = new Abstraction(new ConcreteImplementationA());
+            clientForBridge.ClientCode(abstraction);
+
+            Console.WriteLine();
+
+            abstraction = new ExtendedAbstraction(new ConcreteImplementationB());
+            clientForBridge.ClientCode(abstraction);
+
             //Array Sum up
             int[] array = {1,2,3,4,5,6,7,8,9,10};
             Console.WriteLine(ArrayOperations.SumUpArray(array));
