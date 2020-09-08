@@ -43,6 +43,19 @@ namespace CodeExamples
             Console.WriteLine("Client: Now I've got a decorated component:");
             client.ClientCode(decorator2);
 
+            //Proxy call
+            ClientForProxy clientForProxy = new ClientForProxy();
+
+            Console.WriteLine("Client: Executing the client code with a real subject:");
+            RealSubject realSubject = new RealSubject();
+            clientForProxy.ClientCode(realSubject);
+
+            Console.WriteLine();
+
+            Console.WriteLine("Client: Executing the same client code with a proxy:");
+            Proxy proxy = new Proxy(realSubject);
+            clientForProxy.ClientCode(proxy);
+
             //Array Sum up
             int[] array = {1,2,3,4,5,6,7,8,9,10};
             Console.WriteLine(ArrayOperations.SumUpArray(array));
