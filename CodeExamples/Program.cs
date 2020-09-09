@@ -107,6 +107,38 @@ namespace CodeExamples
             Console.Write("Client: I don't need to check the components classes even when managing the tree:\n");
             clientComposite.ClientCode2(tree, leaf);
 
+            //Flyweight call
+            // The client code usually creates a bunch of pre-populated
+            // flyweights in the initialization stage of the application.
+            var factory = new FlyweightFactory(
+                new Car { Company = "Chevrolet", Model = "Camaro2018", Color = "pink" },
+                new Car { Company = "Mercedes Benz", Model = "C300", Color = "black" },
+                new Car { Company = "Mercedes Benz", Model = "C500", Color = "red" },
+                new Car { Company = "BMW", Model = "M5", Color = "red" },
+                new Car { Company = "BMW", Model = "X6", Color = "white" }
+            );
+            factory.listFlyweights();
+
+            FlyweightFactory.addCarToPoliceDatabase(factory, new Car
+            {
+                Number = "CL234IR",
+                Owner = "James Doe",
+                Company = "BMW",
+                Model = "M5",
+                Color = "red"
+            });
+
+            FlyweightFactory.addCarToPoliceDatabase(factory, new Car
+            {
+                Number = "CL234IR",
+                Owner = "James Doe",
+                Company = "BMW",
+                Model = "X1",
+                Color = "red"
+            });
+
+            factory.listFlyweights();
+
             //Array Sum up
             int[] array = {1,2,3,4,5,6,7,8,9,10};
             Console.WriteLine(ArrayOperations.SumUpArray(array));
