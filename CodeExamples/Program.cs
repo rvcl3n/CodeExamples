@@ -83,6 +83,30 @@ namespace CodeExamples
             Console.WriteLine("Client triggers operation D.");
             component2.DoD();
 
+            //Composite call
+            ClientComposite clientComposite = new ClientComposite();
+
+            // This way the client code can support the simple leaf
+            // components...
+            Leaf leaf = new Leaf();
+            Console.WriteLine("Client: I get a simple component:");
+            clientComposite.ClientCode(leaf);
+
+            // ...as well as the complex composites.
+            Composite tree = new Composite();
+            Composite branch1 = new Composite();
+            branch1.Add(new Leaf());
+            branch1.Add(new Leaf());
+            Composite branch2 = new Composite();
+            branch2.Add(new Leaf());
+            tree.Add(branch1);
+            tree.Add(branch2);
+            Console.WriteLine("Client: Now I've got a composite tree:");
+            clientComposite.ClientCode(tree);
+
+            Console.Write("Client: I don't need to check the components classes even when managing the tree:\n");
+            clientComposite.ClientCode2(tree, leaf);
+
             //Array Sum up
             int[] array = {1,2,3,4,5,6,7,8,9,10};
             Console.WriteLine(ArrayOperations.SumUpArray(array));
