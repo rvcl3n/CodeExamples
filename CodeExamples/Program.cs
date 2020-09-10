@@ -155,6 +155,15 @@ namespace CodeExamples
             context.SetStrategy(new ConcreteStrategyB());
             context.DoSomeBusinessLogic();
 
+            //Command call
+            // The client code can parameterize an invoker with any commands.
+            Invoker invoker = new Invoker();
+            invoker.SetOnStart(new SimpleCommand("Say Hi!"));
+            Receiver receiver = new Receiver(); //Contains methods for execution
+            invoker.SetOnFinish(new ComplexCommand(receiver, "Send email", "Save report"));
+
+            invoker.DoSomethingImportant();
+
             //Array Sum up
             int[] array = {1,2,3,4,5,6,7,8,9,10};
             Console.WriteLine(ArrayOperations.SumUpArray(array));
