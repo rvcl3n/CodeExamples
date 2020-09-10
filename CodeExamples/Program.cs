@@ -139,6 +139,22 @@ namespace CodeExamples
 
             factory.listFlyweights();
 
+            //Strategy call
+            // The client code picks a concrete strategy and passes it to the
+            // context. The client should be aware of the differences between
+            // strategies in order to make the right choice.
+            var context = new Context();
+
+            Console.WriteLine("Client: Strategy is set to normal sorting.");
+            context.SetStrategy(new ConcreteStrategyA());
+            context.DoSomeBusinessLogic();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Client: Strategy is set to reverse sorting.");
+            context.SetStrategy(new ConcreteStrategyB());
+            context.DoSomeBusinessLogic();
+
             //Array Sum up
             int[] array = {1,2,3,4,5,6,7,8,9,10};
             Console.WriteLine(ArrayOperations.SumUpArray(array));
