@@ -164,6 +164,30 @@ namespace CodeExamples
 
             invoker.DoSomethingImportant();
 
+            //Memento call
+            Originator originator = new Originator("Super-duper-super-puper-super.");
+            Caretaker caretaker = new Caretaker(originator);
+
+            caretaker.Backup();
+            originator.DoSomething();
+
+            caretaker.Backup();
+            originator.DoSomething();
+
+            caretaker.Backup();
+            originator.DoSomething();
+
+            Console.WriteLine();
+            caretaker.ShowHistory();
+
+            Console.WriteLine("\nClient: Now, let's rollback!\n");
+            caretaker.Undo();
+
+            Console.WriteLine("\n\nClient: Once more!\n");
+            caretaker.Undo();
+
+            Console.WriteLine();
+
             //Array Sum up
             int[] array = {1,2,3,4,5,6,7,8,9,10};
             Console.WriteLine(ArrayOperations.SumUpArray(array));
