@@ -6,6 +6,7 @@ using System.Threading;
 
 namespace CodeExamples
 {
+    //Todo: Implement a combination of Memento and Command patterns
     // The Originator holds some important state that may change over time. It
     // also defines a method for saving the state inside a memento and another
     // method for restoring the state from it.
