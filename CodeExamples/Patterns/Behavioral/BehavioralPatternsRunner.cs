@@ -96,6 +96,16 @@ namespace CodeExamples.Patterns.Behavioral
 
             Console.WriteLine("{0} = {1}",
               roman, contextInterpreter.Output);
+
+            //TempalteMethod call
+            Console.WriteLine("Same client code can work with different subclasses:");
+
+            Client.ClientCode(new ConcreteClass1());
+
+            Console.Write("\n");
+
+            Console.WriteLine("Same client code can work with different subclasses:");
+            Client.ClientCode(new ConcreteClass2());
         }
     }
 }
