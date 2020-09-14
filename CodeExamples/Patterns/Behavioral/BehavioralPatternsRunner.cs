@@ -106,6 +106,23 @@ namespace CodeExamples.Patterns.Behavioral
 
             Console.WriteLine("Same client code can work with different subclasses:");
             Client.ClientCode(new ConcreteClass2());
+
+            //Visitor call
+            List<IComponent> components = new List<IComponent>
+            {
+                new ConcreteComponentA(),
+                new ConcreteComponentB()
+            };
+
+            Console.WriteLine("The client code works with all visitors via the base Visitor interface:");
+            var visitor1 = new ConcreteVisitor1();
+            ClientVisitor.ClientCode(components, visitor1);
+
+            Console.WriteLine();
+
+            Console.WriteLine("It allows the same client code to work with different types of visitors:");
+            var visitor2 = new ConcreteVisitor2();
+            ClientVisitor.ClientCode(components, visitor2);
         }
     }
 }
