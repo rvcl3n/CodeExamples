@@ -143,6 +143,11 @@ namespace CodeExamples
             //Reverve the words order in the sentence
             Console.WriteLine(StringOperations.ReverseSentence("Test my function"));
 
+            Console.WriteLine(Anagram.CountWords("test estt eye yee eey")); 
+
+            //Console.WriteLine(Math.Round(6.5));
+            //Console.WriteLine(Math.Round(11.5));
+
             Console.ReadKey();
         }
     }
