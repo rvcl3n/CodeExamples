@@ -54,7 +54,6 @@ namespace CodeExamples
                 }         
             }
 
-
             return anagramCount;
         }
     }
