@@ -123,6 +123,31 @@ namespace CodeExamples.Patterns.Behavioral
             Console.WriteLine("It allows the same client code to work with different types of visitors:");
             var visitor2 = new ConcreteVisitor2();
             ClientVisitor.ClientCode(components, visitor2);
+
+            //Iterator call
+            // The client code may or may not know about the Concrete Iterator
+            // or Collection classes, depending on the level of indirection you
+            // want to keep in your program.
+            var collection = new WordsCollection();
+            collection.AddItem("First");
+            collection.AddItem("Second");
+            collection.AddItem("Third");
+
+            Console.WriteLine("Straight traversal:");
+
+            foreach (var element in collection)
+            {
+                Console.WriteLine(element);
+            }
+
+            Console.WriteLine("\nReverse traversal:");
+
+            collection.ReverseDirection();
+
+            foreach (var element in collection)
+            {
+                Console.WriteLine(element);
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ namespace CodeExamples
     {
         static void Main(string[] args)
         {
-            StructuralPatternsRunner.Run();
+            //StructuralPatternsRunner.Run();
             BehavioralPatternsRunner.Run();
 
             //Array Sum up
