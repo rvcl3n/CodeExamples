@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodeExamples
 {
-    abstract class Iterator : IEnumerator
+    abstract class IteratorExample : IEnumerator
     {
         object IEnumerator.Current => Current();
 
@@ -31,7 +31,7 @@ namespace CodeExamples
 
     // Concrete Iterators implement various traversal algorithms. These classes
     // store the current traversal position at all times.
-    class AlphabeticalOrderIterator : Iterator
+    class AlphabeticalOrderIterator : IteratorExample
     {
         private WordsCollection _collection;
 
