@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using CodeExamples.Patterns.Behavioral;
+using CodeExamples.Patterns.Creational;
 
 namespace CodeExamples
 {
@@ -12,7 +13,9 @@ namespace CodeExamples
         static void Main(string[] args)
         {
             //StructuralPatternsRunner.Run();
-            BehavioralPatternsRunner.Run();
+            //BehavioralPatternsRunner.Run();
+            CreationalPatternsRunner.Run();
+
 
             //Array Sum up
             int[] array = {1,2,3,4,5,6,7,8,9,10};

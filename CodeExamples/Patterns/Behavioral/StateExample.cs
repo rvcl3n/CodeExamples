@@ -4,6 +4,7 @@ using System.Text;
 
 namespace CodeExamples
 {
+    //Todo: Implement a combination of Observer and Mediator patterns
     // The Context defines the interface of interest to clients. It also
     // maintains a reference to an instance of a State subclass, which
     // represents the current state of the Context.
