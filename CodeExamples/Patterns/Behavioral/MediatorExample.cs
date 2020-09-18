@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CodeExamples
+namespace CodeExamples.Patterns.Behavioral
 {
     // The Mediator interface declares a method used by components to notify the
     // mediator about various events. The Mediator may react to these events and

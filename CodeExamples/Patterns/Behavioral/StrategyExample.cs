@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace CodeExamples
+namespace CodeExamples.Patterns.Behavioral
 {
     // The Context defines the interface of interest to clients.
     class Context

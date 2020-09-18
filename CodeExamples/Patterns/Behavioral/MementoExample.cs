@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 
-namespace CodeExamples
+namespace CodeExamples.Patterns.Behavioral
 {
     //Todo: Implement a combination of Memento and Command patterns
     // The Originator holds some important state that may change over time. It

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CodeExamples
+namespace CodeExamples.Patterns.Behavioral
 {
     //Todo: Implement a combination of Observer and Mediator patterns
     // The Context defines the interface of interest to clients. It also

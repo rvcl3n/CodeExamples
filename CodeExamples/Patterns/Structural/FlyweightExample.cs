@@ -2,9 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace CodeExamples
+namespace CodeExamples.Patterns.Structural
 {
     // The Flyweight stores a common portion of the state(also called intrinsic
     // state) that belongs to multiple real business entities. The Flyweight

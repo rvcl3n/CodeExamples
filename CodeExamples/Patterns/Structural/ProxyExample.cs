@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CodeExamples
+namespace CodeExamples.Patterns.Structural
 {
     // The Subject interface declares common operations for both RealSubject and
     // the Proxy. As long as the client works with RealSubject using this

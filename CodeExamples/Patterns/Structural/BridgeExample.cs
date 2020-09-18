@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CodeExamples
+namespace CodeExamples.Patterns.Structural
 {
     // The Abstraction defines the interface for the "control" part of the two
     // class hierarchies. It maintains a reference to an object of the

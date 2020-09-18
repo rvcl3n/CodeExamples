@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace CodeExamples
+namespace CodeExamples.Patterns.Behavioral
 {
     // The Component interface declares an `accept` method that should take the
     // base visitor interface as an argument.

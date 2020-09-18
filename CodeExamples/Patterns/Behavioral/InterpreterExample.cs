@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CodeExamples.Patterns.Behavioral
+﻿namespace CodeExamples.Patterns.Behavioral
 {
     /// <summary>
-
     /// The 'Context' class
-
     /// </summary>
 
     class ContextInterpreter

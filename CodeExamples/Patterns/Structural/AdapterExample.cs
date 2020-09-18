@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CodeExamples
+﻿namespace CodeExamples.Patterns.Structural
 {
     public interface ITarget
     {
