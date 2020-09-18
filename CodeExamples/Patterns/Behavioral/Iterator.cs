@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CodeExamples.Patterns.Behavioral
 {
-    abstract class IteratorExample : IEnumerator
+    abstract class Iterator : IEnumerator
     {
         object IEnumerator.Current => Current();
 
@@ -29,7 +29,7 @@ namespace CodeExamples.Patterns.Behavioral
 
     // Concrete Iterators implement various traversal algorithms. These classes
     // store the current traversal position at all times.
-    class AlphabeticalOrderIterator : IteratorExample
+    class AlphabeticalOrderIterator : Iterator
     {
         private WordsCollection _collection;
 

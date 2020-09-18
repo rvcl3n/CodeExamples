@@ -48,7 +48,7 @@ namespace CodeExamples.Patterns.Structural
     /// <summary>
     /// The 'Facade' class
     /// </summary>
-    class FacadeExample
+    class Facade
 
     {
         private SubSystemOne _one;
@@ -56,7 +56,7 @@ namespace CodeExamples.Patterns.Structural
         private SubSystemThree _three;
         private SubSystemFour _four;
 
-        public FacadeExample()
+        public Facade()
         {
             _one = new SubSystemOne();
             _two = new SubSystemTwo();

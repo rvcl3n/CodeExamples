@@ -17,7 +17,7 @@ namespace CodeExamples.Patterns.Structural
 
 
             //Facade call
-            FacadeExample facade = new FacadeExample();
+            Facade facade = new Facade();
 
             facade.MethodA();
             facade.MethodB();
