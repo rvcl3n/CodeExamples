@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CodeExamples
@@ -55,6 +56,13 @@ namespace CodeExamples
                     Console.WriteLine(res);
                 }
             }
+        }
+
+        //One line implementation, but I didn't get how ;; works
+        public static void FizzBuzz3()
+        {
+            Enumerable.Range(1, 100).ToList().ForEach(i => Console.WriteLine($"{(i % 3 * i % 5 == 0 ? 0 : i):#;}{i % 3:;;Fizz}{i % 5:;;Buzz}"));
+
         }
     }
 }

@@ -25,7 +25,9 @@ namespace CodeExamples
             //Console.WriteLine(Math.Round(6.5));
             //Console.WriteLine(Math.Round(11.5));
 
-            FizzBuzzTask.FizzBuzz2();
+            //FizzBuzzTask.FizzBuzz2();
+
+            FizzBuzzTask.FizzBuzz3();
 
             Console.ReadKey();
         }
